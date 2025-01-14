@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/chat/chat",
+    "pages/user-list/user-list",
+    "pages/error/error",
+    "pages/settings/settings",
+    "pages/favorites/favorites",
+    "pages/history/history",
+    "pages/feedback/feedback",
+    "pages/PostList/PostList",
+    "pages/post-editor/post-editor",
+    "pages/PostListView/PostListView",
+    "pages/userProfile/userProfile",
+    "pages/postDetail/postDetail",
+    "pages/partition/partition",
+    "pages/heat/heat"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/heat/heat",
+        "text": "热榜"
+      },
+      {
+        "pagePath": "pages/user-list/user-list",
+        "text": "私信"
+      },
+      {
+        "pagePath": "pages/settings/settings",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarTitleText": "TALKERS",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  }
+}

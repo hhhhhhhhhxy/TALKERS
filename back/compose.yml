@@ -1,0 +1,136 @@
+services:
+  # mysql:
+  #   image: mysql:latest
+  #   container_name: sse_market_db
+  #   restart: on-failure:3
+  #   command:
+  #     --max_connections=1000
+  #     --default-authentication-plugin=mysql_native_password
+  #     --innodb_lock_wait_timeout=500
+  #   ports: 
+  #     - 3506:3306
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=admin
+  #     - TZ=Asia/Shanghai
+  #     - MYSQL_DATABASE=ssemarket
+  #   volumes:
+  #     - my-vol:/var/lib/mysql
+  # redis:
+  #   image: redis:latest
+  #   environment:
+  #     - TZ=Asia/Shanghai
+  # sse_market_server:
+  #   image: sse_market_server:latest
+  #   container_name: server
+  #   restart: on-failure:3
+  #   build: .
+  #   # ports:
+  #   #   - 8080:8080
+  #   environment:
+  #     - TZ=Asia/Shanghai
+  #   volumes:
+  #     - /root/SSE_Market/sse_market_server_resource:/app/public
+  #     - /root/SSE_Market/log/server:/app/log
+  #     - /root/SSE_Market/database:/app/database
+  #     # - /root/SSE_Market/Nginx:/app/ssl
+  # sse_market_server_public:
+  #   image: sse_market_server_public:latest
+  #   container_name: server_public
+  #   restart: on-failure:3
+  #   build: ../sse_market_server_public
+  #   # ports:
+  #   #   - 8080:8080
+  #   environment:
+  #     - TZ=Asia/Shanghai
+  #   volumes:
+  #     - /root/SSE_Market/sse_market_server_public_resource:/app/public
+  #     - /root/SSE_Market/log/server_public:/app/log
+  #     - /root/SSE_Market/database_public:/app/database
+  #     # - /root/SSE_Market/Nginx:/app/ssl
+  # nginx_proxy:
+  #   image: nginx_proxy
+  #   restart: on-failure:3
+  #   build: ../nginx_proxy
+  #   ports:
+  #     - 80:80
+  #     - 443:443
+  #   volumes:
+  #     - /root/SSE_Market/Nginx:/etc/letsencrypt/
+  #     - /root/SSE_Market/sse_market_mobile/dist:/usr/share/nginx/mb
+  #     - /root/SSE_Market/SSE_market_client/dist:/usr/share/nginx/pc
+  #     - /root/SSE_Market/sse_market_client_public/dist:/usr/share/nginx/open
+  #     - /root/SSE_Market/hexo_blog/public:/usr/share/nginx/blog
+  #     - /root/SSE_Market/sse_market_new_client/newSSE/dist:/usr/share/nginx/new
+  mysql:
+    image: mysql:latest
+    container_name: talkers_db
+    restart: on-failure:3
+    command:
+      --max_connections=1000
+      --default-authentication-plugin=mysql_native_password
+      --innodb_lock_wait_timeout=500
+    ports: 
+      - 3506:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+      - TZ=Asia/Shanghai
+      - MYSQL_DATABASE=talkers
+    volumes:
+      - my-vol:/var/lib/mysql
+  redis:
+    image: redis:latest
+    environment:
+      - TZ=Asia/Shanghai
+  talkers_server:
+    image: talkers_server:latest
+    container_name: server
+    restart: on-failure:3
+    build: .
+    # ports:
+    #   - 8080:8080
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - /root/talkers/talkers_server_resource:/app/public
+      - /root/talkers/log/server:/app/log
+      - /root/Stalkers/database:/app/database
+      # - /root/talkers/Nginx:/app/ssl
+  talkers_server_public:
+    image: talkers_server_public:latest
+    container_name: server_public
+    restart: on-failure:3
+    build: ../talkers_server_public
+    # ports:
+    #   - 8080:8080
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - /root/talkers/talkers_server_public_resource:/app/public
+      - /root/talkers/log/server_public:/app/log
+      - /root/talkers/database_public:/app/database
+      # - /root/talkers/Nginx:/app/ssl
+  nginx_proxy:
+    image: nginx_proxy
+    restart: on-failure:3
+    build: ../nginx_proxy
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /root/talkers/Nginx:/etc/letsencrypt/
+      - /root/talkers/talkers_mobile/dist:/usr/share/nginx/mb
+      - /root/talkers/talkers_client/dist:/usr/share/nginx/pc
+      - /root/talkers/talkers_client_public/dist:/usr/share/nginx/open
+      - /root/talkers/hexo_blog/public:/usr/share/nginx/blog
+      - /root/talkers/talkers_new_client/newtalkers/dist:/usr/share/nginx/new
+volumes:
+  my-vol:
+  blog_db_data: 
+    external: true
+  wordpress_data: 
+  blog_wordpress_data:
+    external: true
+
+networks:
+  talkers_network:
+    driver: bridge

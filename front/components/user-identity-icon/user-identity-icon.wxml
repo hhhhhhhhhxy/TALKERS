@@ -1,0 +1,14 @@
+<view
+  wx:if="{{ identityIcon[identity] }}"
+  class="user-identity identity-{{ identity }}"
+>
+  <icon
+    class="user-identity-icon"
+    type="{{ identityIcon[identity] }}"
+    size="12"
+    color="#fff"
+  />
+  <view wx:if="{{ !noTip }}" class="user-identity-name">
+    {{ identityName[identity] }}
+  </view>
+</view>

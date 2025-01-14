@@ -1,0 +1,43 @@
+.root {
+  width: 100%;
+  color: var(--color-text);
+}
+
+.partition {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.teacher-select {
+  margin-bottom: 20px;
+}
+
+.gradientUnderline {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.picker {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.bottomDiv {
+  text-align: center;
+  height: 50px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}

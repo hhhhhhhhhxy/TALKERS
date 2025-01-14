@@ -1,0 +1,46 @@
+.user-identity {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fb0;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-identity-icon {
+  filter: drop-shadow(1px 1px 0 rgba(68, 68, 68, 0.5));
+}
+
+.user-identity-name {
+  position: absolute;
+  z-index: 2000;
+  pointer-events: none;
+  word-break: keep-all;
+  font-size: 65%;
+  background: #333;
+  color: #eee;
+  bottom: 1.6rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.user-identity-name::after {
+  content: ' ';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  transform: rotate(45deg);
+  bottom: -2px;
+  left: calc(50% - 2px);
+  background: inherit;
+}
+
+.user-identity:hover .user-identity-name {
+  opacity: 1;
+}

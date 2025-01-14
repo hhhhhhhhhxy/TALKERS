@@ -1,0 +1,89 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+/* 头部 */
+.site-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px;
+  background-color: rgb(255, 196, 107);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-left,
+.top-right {
+  padding: 5px;
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.search-input {
+  flex: 1;
+  height: 30px;
+  padding: 0 10px;
+  font-size: 14px;
+  background-color: transparent;
+}
+
+.search-button {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eb6b26;
+  color: #fff;
+  border-radius: 20px;
+}
+
+/* 帖子列表 */
+.content {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.post-item {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.post-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #666;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-text {
+  font-size: 12px;
+  margin-top: 5px;
+}

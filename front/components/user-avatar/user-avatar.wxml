@@ -1,0 +1,13 @@
+<view
+  class="user-avatar"
+  style="{{ userId ? 'cursor: pointer;' : '' }}"
+  bindtap="navigate"
+>
+  <image
+    class="user-avatar-img"
+    src="{{ src || defaultAvatar }}"
+    mode="aspectFill"
+    lazy-load
+  />
+  <user-identity-icon identity="{{ userIdentity }}" />
+</view>

@@ -1,0 +1,44 @@
+/* pages/user-list/user-list.wxss */
+.user-list {
+  padding: 10px;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  position: relative; /* 为未读红点定位 */
+}
+
+.user-avatar {
+  margin-right: 10px;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.user-intro {
+  font-size: 14px;
+  color: #666;
+}
+
+.unread-badge {
+  position: absolute;
+  right: 10px; /* 放在右边 */
+  top: 50%;
+  transform: translateY(-50%);
+  background: #f00;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  min-width: 18px;
+  text-align: center;
+}

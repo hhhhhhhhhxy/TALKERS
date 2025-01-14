@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "markdown-editor": "/components/markdown-editor/markdown-editor"
+  }
+}

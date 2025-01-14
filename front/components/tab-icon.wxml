@@ -1,0 +1,5 @@
+<!-- components/tab-icon/tab-icon.wxml -->
+<view class="tab-icon">
+  <icon type="{{iconType}}" size="20" color="{{color}}" />
+  <text class="tab-text" style="color: {{color}}">{{text}}</text>
+</view>

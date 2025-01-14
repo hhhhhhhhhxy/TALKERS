@@ -1,0 +1,30 @@
+<!-- pages/chat/chat.wxml -->
+<view class="chat">
+  <!-- 聊天记录 -->
+  <scroll-view class="message-history" scroll-y>
+    <block wx:for="{{messages}}" wx:key="chatMsgID">
+      <view class="message-item {{item.senderUserID === user.userID ? 'right' : 'left'}}">
+        <view class="message-content">
+          <!-- 去掉发送者名称 -->
+          <view class="message-body">{{item.content}}</view>
+          <view class="message-status">
+            <block wx:if="{{item.senderUserID === user.userID}}">
+              {{item.read ? '已读' : '未读'}}
+            </block>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- 消息输入框 -->
+  <view class="message-input">
+    <textarea
+      value="{{draft}}"
+      placeholder="输入信息..."
+      bindinput="handleInput"
+      bindconfirm="sendMessage"
+    />
+    <button bindtap="sendMessage">发送</button>
+  </view>
+</view>

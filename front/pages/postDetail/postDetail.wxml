@@ -1,0 +1,68 @@
+<view class="root">
+  <!-- 帖子详情 -->
+  <block wx:if="{{isPostLoaded}}">
+    <view class="post-detail">
+      <view class="post-title">{{post.Title}}</view>
+      <view class="post-content">{{post.Content}}</view>
+    </view>
+  </block>
+  <block wx:else>
+    <view>loading...</view>
+  </block>
+
+  <!-- 评论区域 -->
+  <view class="comment">
+    <view class="comment-header">
+      <view class="comment-title">评论</view>
+      <view class="sort-comment">
+        <view
+          class="sort-btn"
+          bindtap="setSortType"
+          data-type="time"
+        >
+          <text>时间</text>
+        </view>
+        <view
+          class="sort-btn"
+          bindtap="setSortType"
+          data-type="likes"
+        >
+          <text>热度</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 评论列表 -->
+    <block wx:if="{{post.Comment}}">
+      <view class="comment-list">
+        <block wx:for="{{sortedComments}}" wx:key="{{item.PcommentID}}-{{item.SubComments.length}}">
+          <view class="comment-item">
+            <view class="comment-content">{{item.Content}}</view>
+            <view class="comment-actions">
+              <button
+                wx:if="{{item.SubComments.length}}"
+                bindtap="toggleComment"
+                data-id="{{item.PcommentID}}"
+              >
+                {{postCommentID === item.PcommentID ? '收起' : '展开'}}
+              </button>
+            </view>
+            <!-- 子评论 -->
+            <block wx:if="{{item.SubComments && item.SubComments.length > 0}}">
+              <view
+                class="sub-comment-list"
+                wx:show="{{postCommentID === item.PcommentID}}"
+              >
+                <block wx:for="{{item.SubComments}}" wx:key="{{item.ccommentID}}">
+                  <view class="sub-comment-item">
+                    <view class="sub-comment-content">{{item.Content}}</view>
+                  </view>
+                </block>
+              </view>
+            </block>
+          </view>
+        </block>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,175 @@
+<view class="pageWithLoginButton root">
+  <view class="title">{{ title }}</view>
+  <!-- 登录 -->
+  <block wx:if="{{page === 0}}">
+    <view class="loginAndRegPage">
+      <view class="inputData">
+        <input
+          id="loginEmail"
+          type="email"
+          value="{{email}}"
+          bindinput="handleEmailInput"
+          placeholder=""
+        />
+        <view class="underline"></view>
+        <label wx:if="{{!email}}" for="loginEmail">邮箱</label>
+      </view>
+      <view class="inputData">
+        <input
+          id="loginPassword"
+          type="password"
+          value="{{password1}}"
+          bindinput="handlePassword1Input"
+          placeholder=""
+        />
+        <view class="underline"></view>
+        <label wx:if="{{!password1}}" for="loginPassword">密码</label>
+      </view>
+      <view>
+        <checkbox
+          checked="{{remembered}}"
+          bindchange="handleRememberedChange"
+        />记住我
+      </view>
+      <button class="LoginAndRegButton" bindtap="login">登录</button>
+      <view class="regButtons">
+        <view class="regButtonDiv" bindtap="jumpToReg">
+          <text class="regButton">注册</text>
+        </view>
+        <view class="regButtonDiv" bindtap="forget">
+          <text class="regButton">忘记密码</text>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <!-- 注册 -->
+  <block wx:elif="{{page === 1}}">
+    <view class="loginAndRegPage reg">
+      <view class="inputData">
+        <input
+          id="username"
+          type="text"
+          value="{{username}}"
+          bindinput="handleUsernameInput"
+          placeholder=""
+        />
+        <view class="underline"></view>
+        <label wx:if="{{!username}}" for="username">用户名</label>
+      </view>
+      <view class="inputData">
+        <input
+          id="regEmail"
+          type="email"
+          value="{{email}}"
+          bindinput="handleEmailInput"
+          placeholder=""
+        />
+        <view class="underline"></view>
+        <label wx:if="{{!email}}" for="regEmail">邮箱</label>
+      </view>
+      <view class="inputData">
+        <input
+          type="text"
+          value="{{code}}"
+          bindinput="handleCodeInput"
+          placeholder=""
+        />
+        <view class="underline"></view>
+        <label wx:if="{{!code}}">验证码</label>
+      </view>
+      <view class="inputData">
+        <input
+          id="password1"
+          type="password"
+          value="{{password1}}"
+          bindinput="handlePassword1Input"
+          placeholder=""
+        />
+        <view class="underline"></view>
+        <label wx:if="{{!password1}}" for="password1">密码</label>
+      </view>
+      <view class="inputData">
+        <input
+          id="password2"
+          type="password"
+          value="{{password2}}"
+          bindinput="handlePassword2Input"
+          placeholder=""
+        />
+        <view class="underline"></view>
+        <label wx:if="{{!password2}}" for="password2">重复</label>
+      </view>
+      <view class="inputData">
+        <input
+          id="CDkey"
+          type="text"
+          value="{{CDkey}}"
+          bindinput="handleCDkeyInput"
+          placeholder=""
+        />
+        <view class="underline"></view>
+        <label wx:if="{{!CDkey}}" for="CDkey">邀请码</label>
+      </view>
+      <button class="LoginAndRegButton" bindtap="getVCode" data-mode="0">发送验证码</button>
+      <button class="LoginAndRegButton" bindtap="reg">注册</button>
+      <view class="regButtonDiv" bindtap="jumpToReg">
+        <text class="regButton">返回登录</text>
+      </view>
+    </view>
+  </block>
+
+  <!-- 忘记密码 -->
+  <block wx:elif="{{page === 2}}">
+    <view class="loginAndRegPage">
+      <view class="inputData">
+        <input
+          id="loginEmail"
+          type="email"
+          value="{{email}}"
+          bindinput="handleEmailInput"
+          placeholder=""
+        />
+        <view class="underline"></view>
+        <label wx:if="{{!email}}" for="loginEmail">邮箱</label>
+      </view>
+      <view class="inputData">
+        <input
+          type="text"
+          value="{{code}}"
+          bindinput="handleCodeInput"
+          placeholder=""
+        />
+        <view class="underline"></view>
+        <label wx:if="{{!code}}">验证码</label>
+      </view>
+      <view class="inputData">
+        <input
+          id="password1"
+          type="password"
+          value="{{password1}}"
+          bindinput="handlePassword1Input"
+          placeholder=""
+        />
+        <view class="underline"></view>
+        <label wx:if="{{!password1}}" for="password1">密码</label>
+      </view>
+      <view class="inputData">
+        <input
+          id="password2"
+          type="password"
+          value="{{password2}}"
+          bindinput="handlePassword2Input"
+          placeholder=""
+        />
+        <view class="underline"></view>
+        <label wx:if="{{!password2}}" for="password2">重复</label>
+      </view>
+      <button class="LoginAndRegButton" bindtap="getVCode" data-mode="1">发送验证码</button>
+      <button class="LoginAndRegButton" bindtap="resetPwd">重置密码</button>
+      <view class="regButtonDiv" bindtap="forget">
+        <text class="regButton">返回登录</text>
+      </view>
+    </view>
+  </block>
+</view>

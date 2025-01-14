@@ -1,0 +1,29 @@
+<view class="root">
+  <view class="partition">
+    <text>当前分区：{{ partition }}</text>
+  </view>
+  <block wx:if="{{ partition === '课程专区' }}">
+    <view class="teacher-select">
+      <text class="gradientUnderline">请选择你的老师，不选也没关系</text>
+      <picker
+        mode="selector"
+        range="{{ teachers }}"
+        range-key="Name"
+        bindchange="onTeacherChange"
+      >
+        <view class="picker">
+          {{ tag || '请选择老师' }}
+        </view>
+      </picker>
+    </view>
+  </block>
+  <block wx:for="{{ posts }}" wx:key="PostID">
+    <post-card post="{{ item }}" bind:delete="deleteHandler" />
+  </block>
+  <view wx:if="{{ isLoading }}" class="bottomDiv">
+    loading...
+  </view>
+  <view wx:else class="bottomDiv">
+    noMore
+  </view>
+</view>

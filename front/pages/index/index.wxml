@@ -1,0 +1,36 @@
+<view id="root" class="root">
+  <!-- 头部 -->
+  <view class="site-top">
+    <!-- 左上角：分区 -->
+    <view class="top-left" bindtap="navigateToPartitions">
+      <text>Part</text>
+    </view>
+
+    <!-- 搜索栏 -->
+    <view class="search">
+      <input placeholder="搜索帖子..." bindinput="handleSearchInput" class="search-input" />
+      <view class="search-button" bindtap="search">
+        <text>Q</text>
+      </view>
+    </view>
+
+    <!-- 右上角：发帖 -->
+    <view class="top-right" bindtap="navigateToPost">
+      <text>十</text>
+    </view>
+  </view>
+
+  <!-- 主体内容 -->
+  <view class="content">
+    <!-- 帖子列表 -->
+    <block wx:for="{{posts}}" wx:key="index">
+      <view class="post-item">
+        <view class="post-title">{{item.title}}</view>
+        <view class="post-info">
+          <text class="post-author">{{item.author}}</text>
+          <text class="post-time">{{item.time}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

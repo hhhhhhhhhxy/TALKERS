@@ -1,0 +1,14 @@
+<view class="root">
+  <view class="header">
+    <text class="title">选择分区</text>
+  </view>
+  <view class="partitions">
+    <block wx:for="{{partitions}}" wx:key="index">
+      <view class="card">
+        <view class="card-title">{{item.name}}</view>
+        <view class="card-description">{{item.description}}</view>
+        <button class="btn" bindtap="sendPartition" data-name="{{item.name}}">跳转分区</button>
+      </view>
+    </block>
+  </view>
+</view>

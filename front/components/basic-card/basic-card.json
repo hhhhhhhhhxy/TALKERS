@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "user-avatar": "/components/user-avatar/user-avatar",
+    "markdown-container": "/components/markdown-container/markdown-container"
+  }
+}

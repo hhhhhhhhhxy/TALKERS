@@ -1,0 +1,28 @@
+<view class="root">
+  <view class="inputData title">
+    <text>标题</text>
+    <input
+      type="text"
+      placeholder="请输入标题"
+      value="{{ title }}"
+      bindinput="updateTitle"
+    />
+  </view>
+  <view class="inputData">
+    <text>分区</text>
+    <picker
+      mode="selector"
+      range="{{ partitions }}"
+      bindchange="updatePartition"
+    >
+      <view class="picker">{{ partition }}</view>
+    </picker>
+  </view>
+  <view class="inputData post">
+    <text>正文</text>
+    <markdown-editor
+      model-value="{{ postContent }}"
+      bindsend="submitPost"
+    />
+  </view>
+</view>

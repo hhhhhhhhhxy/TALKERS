@@ -1,0 +1,63 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  height: auto;
+  width: 100%;
+  color: var(--color-text);
+}
+
+.title {
+  margin-top: 100px;
+  top: 0;
+}
+
+.inputData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.post {
+  height: auto;
+  min-height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+  margin-top: 0;
+}
+
+.post > view {
+  flex-shrink: 0;
+}
+
+picker {
+  width: 25%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  line-height: 30px;
+}
+
+.title input {
+  width: 25%;
+  height: 30px;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    margin-top: 10px;
+  }
+}

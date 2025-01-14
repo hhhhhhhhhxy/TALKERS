@@ -1,0 +1,71 @@
+/* pages/chat/chat.wxss */
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.message-history {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.message-item {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.message-item.left {
+  justify-content: flex-start;
+}
+
+.message-item.right {
+  justify-content: flex-end;
+}
+
+.message-content {
+  max-width: 70%;
+  padding: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+}
+
+.message-item.right .message-content {
+  background: #007aff;
+  color: #fff;
+}
+
+.message-body {
+  font-size: 14px;
+}
+
+.message-status {
+  font-size: 12px;
+  color: #666;
+  text-align: right;
+  margin-top: 4px;
+}
+
+.message-item.right .message-status {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.message-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.message-input textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.message-input button {
+  margin-left: 10px;
+}

@@ -1,0 +1,66 @@
+<view class="card-root root">
+  <view class="user">
+    <user-avatar
+      src="{{ cardData.UserAvatar }}"
+      user-id="{{ cardData.UserID }}"
+      user-identity="{{ cardData.UserIdentity }}"
+    />
+    <text class="user-name">
+      {{ cardData.UserName }}
+      <block wx:if="{{ cardData.userTargetName }}">
+        回复{{ cardData.userTargetName || '层主' }}
+      </block>
+    </text>
+    <block wx:if="{{ !cardData.userTargetName }}">
+      <text
+        class="level {{ levelClassHandler(cardData.UserScore) }}"
+      >{{ levelNameHandler(cardData.UserScore) }}
+      </text>
+    </block>
+    <view class="userButtons">
+      <slot name="userButtons"></slot>
+    </view>
+  </view>
+  <block wx:if="{{ cardData.Title }}">
+    <view class="card-title">
+      <text wx:if="{{ cardData.Title.length <= 10 }}" class="title-large">
+        {{ cardData.Title || '' }}
+      </text>
+      <text wx:else class="title-small">
+        {{ cardData.Title || '' }}
+      </text>
+    </view>
+  </block>
+  <block wx:if="{{ isPost }}">
+    <text>{{ cardData.Content || 'loading' }}</text>
+  </block>
+  <block wx:else>
+    <markdown-container markdown-content="{{ cardData.Content || 'loading' }}" />
+  </block>
+  <block wx:if="{{ cardData.Photos }}">
+    <view class="imgs">
+      <block wx:for="{{ strHandler('img', cardData.Photos) }}" wx:key="img">
+        <image src="{{ item }}" mode="aspectFill" />
+      </block>
+    </view>
+  </block>
+  <text class="card-time">{{ strHandler('time', cardData.PostTime) }}</text>
+  <view class="basicInfo">
+    <block wx:if="{{ cardData.Browse || cardData.Browse === 0 }}">
+      <text>{{ cardData.Browse }}</text>
+      <image src="/assets/icons/eye-fill.svg" mode="aspectFit" />
+    </block>
+    <block wx:if="{{ cardData.Comment || cardData.Comment === 0 }}">
+      <text>{{ cardData.Comment < 0 ? 0 : cardData.Comment }}</text>
+      <image src="/assets/icons/chat-dots-fill.svg" mode="aspectFit" />
+    </block>
+    <view
+      class="like {{ basicData.IsLiked ? 'liked' : '' }}"
+      bindtap="like"
+    >
+      <text>{{ basicData.Like < 0 ? 0 : basicData.Like }}</text>
+      <image src="/assets/icons/heart.svg" mode="aspectFit" />
+    </view>
+  </view>
+  <slot name="comment"></slot>
+</view>

@@ -1,0 +1,75 @@
+<view class="root">
+  <!-- 头部 -->
+  <view class="header">
+    <text>设置</text>
+  </view>
+
+  <!-- 数据部分 -->
+  <view class="data">
+    <!-- 个人信息 -->
+    <view class="section">
+      <text class="section-title">个人信息</text>
+      <image src="{{allInfo.avatarURL}}" mode="aspectFill" class="avatar" />
+      <view class="custom-file-label" bindtap="chooseAvatar">修改头像</view>
+      <input type="file" id="fileInput" style="display: none;" bindchange="uploadAvatarFunc" />
+
+      <!-- 用户基本信息 -->
+      <view class="user-basic-info">
+        <view class="info-item">
+          <text>ID：</text>
+          <text>{{allInfo.phone}}</text>
+        </view>
+        <view class="info-item">
+          <text>邮箱：</text>
+          <text>{{allInfo.email}}</text>
+        </view>
+        <view class="info-item">
+          <text>经验：</text>
+          <view class="exp-container">
+            <text class="level {{levelClassHandler(allInfo.score)}}">{{levelNameHandler(allInfo.score)}}</text>
+            <view class="progress-container">
+              <view class="progress-bar" style="{{progressStyle}}"></view>
+            </view>
+            <text>{{allInfo.score}} / {{levelExpHandler(allInfo.score)}}</text>
+            <text class="level level-next">{{levelNameHandler(levelExpHandler(allInfo.score))}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 修改信息 -->
+    <view class="section">
+      <view class="form-group">
+        <text>用户名</text>
+        <input value="{{allInfo.name}}" bindinput="updateName" />
+      </view>
+      <view class="form-group">
+        <text>简介</text>
+        <input value="{{allInfo.intro}}" bindinput="updateIntro" />
+      </view>
+      <button class="button" bindtap="updateUserInfoFunc">修改信息</button>
+    </view>
+
+    <!-- 重置密码 -->
+    <view class="section">
+      <text class="section-title">重置密码</text>
+      <input placeholder="验证码" value="{{vCode}}" bindinput="updateVCode" />
+      <button class="button" bindtap="codeHandler">发送验证码</button>
+      <input placeholder="密码" value="{{password1}}" bindinput="updatePassword1" />
+      <input placeholder="确认密码" value="{{password2}}" bindinput="updatePassword2" />
+      <button class="button" bindtap="updatePasswordFunc">重置</button>
+    </view>
+
+    <!-- 功能导航 -->
+    <view class="section">
+      <button class="button" bindtap="navigateToFavorites">收藏</button>
+      <button class="button" bindtap="navigateToHistory">历史</button>
+      <button class="button" bindtap="navigateToFeedback">反馈</button>
+    </view>
+
+    <!-- 退出登录 -->
+    <view class="section">
+      <button class="button logout-button" bindtap="logout">退出登录</button>
+    </view>
+  </view>
+</view>

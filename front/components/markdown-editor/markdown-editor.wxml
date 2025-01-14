@@ -1,0 +1,48 @@
+<view class="root">
+  <view class="editorButton">
+    <button bindtap="editContent" data-type="标题">标题</button>
+    <button bindtap="editContent" data-type="粗体">粗体</button>
+    <button bindtap="editContent" data-type="斜体">斜体</button>
+    <button bindtap="editContent" data-type="删除线">删除线</button>
+    <button bindtap="editContent" data-type="引用">引用</button>
+    <button bindtap="editContent" data-type="无序列表">无序列表</button>
+    <button bindtap="editContent" data-type="有序列表">有序列表</button>
+    <button bindtap="editContent" data-type="表格">表格</button>
+    <button bindtap="editContent" data-type="分割线">分割线</button>
+    <button bindtap="editContent" data-type="代码块">代码块</button>
+    <button bindtap="togglePreview">
+      {{ isPreview ? '不想看了' : '看看效果' }}
+    </button>
+  </view>
+  <view class="container">
+    <textarea
+      value="{{ modelValue }}"
+      placeholder="请输入正文"
+      bindinput="handleInput"
+      bindpaste="handlePaste"
+      style="height: {{ textareaHeight }}px;"
+    />
+    <markdown-container
+      wx:if="{{ isPreview }}"
+      markdown-content="{{ modelValue }}"
+    />
+  </view>
+  <view class="buttons">
+    <view
+      wx:if="{{ routePath === '/post' }}"
+      class="button"
+      bindtap="savePost"
+    >
+      暂存为草稿
+    </view>
+    <view class="button" bindtap="send">发送</view>
+    <label for="fileInput" class="button">选择图片</label>
+    <input
+      id="fileInput"
+      type="file"
+      accept="image/*"
+      style="display: none;"
+      bindchange="uploadFile"
+    />
+  </view>
+</view>

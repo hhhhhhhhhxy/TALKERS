@@ -1,0 +1,17 @@
+<!-- pages/user-list/user-list.wxml -->
+<view class="user-list">
+  <block wx:for="{{users}}" wx:key="userID">
+    <view class="user-item" bindtap="navigateToChat" data-user="{{item}}">
+      <view class="user-avatar">
+        <icon type="contact" size="40" color="#666" /> <!-- 使用内置 icon -->
+      </view>
+      <view class="user-info">
+        <view class="user-name">{{item.name}}</view>
+        <view class="user-intro">{{item.intro}}</view>
+      </view>
+      <view wx:if="{{item.unreadCount > 0}}" class="unread-badge">
+        {{item.unreadCount > 99 ? '99+' : item.unreadCount}}
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,13 @@
+<view class="root nav-bar heat">
+  <view class="header">
+    <text class="title" id="heat">热榜</text>
+  </view>
+  <block wx:for="{{heatPosts}}" wx:key="PostID">
+    <navigator
+      class="nav"
+      url="/pages/postDetail/postDetail?id={{item.PostID}}"
+    >
+      <text>{{item.Title}}</text>
+    </navigator>
+  </block>
+</view>

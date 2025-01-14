@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "user-identity-icon": "/components/user-identity-icon/user-identity-icon"
+  }
+}

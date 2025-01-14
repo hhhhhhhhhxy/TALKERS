@@ -1,0 +1,3 @@
+<view id="msgbox-root">
+    <text>{{msg}}</text>
+</view>

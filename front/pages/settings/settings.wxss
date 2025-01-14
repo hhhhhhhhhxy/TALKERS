@@ -1,0 +1,121 @@
+/* 根容器 */
+.root {
+  color: var(--color-text);
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* 头像 */
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px auto;
+  display: block;
+}
+
+/* 数据容器 */
+.data {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 信息表单 */
+.info-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* 表单组 */
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group text {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* 按钮 */
+.button {
+  width: 40%;
+  padding: 8px 10px;
+  background-color: #ff7e3b;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+  height: 36px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #ff7e3b;
+}
+
+/* 经验条 */
+.exp-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.progress-container {
+  width: 60%;
+  background-color: #ede7e79a;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
+  margin: 0 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 20px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* 等级 */
+.level {
+  font-size: 1rem;
+  margin-left: 10px;
+  border-radius: 10%;
+  padding: 5px 10px;
+}
+
+.level-next {
+  background-color: #dddddd;
+  color: #8e8e8e;
+}
+
+/* 退出登录按钮 */
+.logout-button {
+  background-color: #ff4d4d;
+}

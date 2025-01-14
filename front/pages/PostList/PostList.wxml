@@ -1,0 +1,10 @@
+<view class="root">
+  <view class="header">
+    <text>当前分区：{{ partition }}</text>
+  </view>
+  <block wx:for="{{ posts }}" wx:key="PostID">
+    <post-card post="{{ item }}" delete-handler="{{ deleteHandler }}" />
+  </block>
+  <view wx:if="{{ isLoading }}" class="bottomDiv">loading...</view>
+  <view wx:else class="bottomDiv">noMore</view>
+</view>

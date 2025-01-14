@@ -1,0 +1,16 @@
+<view class="root">
+  <view class="header">
+    <text class="subtitle">请在下方输入您的反馈信息</text>
+  </view>
+  <textarea
+    class="feedback-textarea"
+    placeholder="请在此输入反馈..."
+    bindinput="onInput"
+  />
+  <button
+    class="btn btn-primary"
+    bindtap="submitFeedback"
+  >
+    提交
+  </button>
+</view>

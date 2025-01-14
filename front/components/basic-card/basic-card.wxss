@@ -1,0 +1,124 @@
+.card-root {
+  width: 100%;
+  min-height: 150px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 15px;
+  box-shadow: var(--color-post-card-box-shadow) 0px 3px 8px;
+  transition: all 0.5s;
+}
+
+.user {
+  --userImage: 50px;
+  width: 100%;
+  height: 30px;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.user-name {
+  color: var(--color-user-text);
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.userButtons {
+  margin-top: 0;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.card-title {
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.title-large {
+  font-size: 18px;
+}
+
+.title-small {
+  font-size: 16px;
+}
+
+.card-time {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.imgs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imgs image {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+}
+
+.basicInfo {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.like {
+  display: flex;
+  align-items: center;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.liked {
+  color: #ff0000;
+}
+
+.level {
+  font-size: 13px;
+  margin-left: 6px;
+  border-radius: 10%;
+  padding: 5px 10px;
+}
+
+.level-1 {
+  background-color: #1aa6b9;
+}
+
+.level-2 {
+  background-color: #378814;
+}
+
+.level-3 {
+  background-color: #d74a4a;
+}
+
+.level-4 {
+  background: linear-gradient(45deg, #ff7d7d, #ff5a99, #e376e5, #9a7ef8);
+  background-size: 300% 300%;
+  animation: change-color 5s ease infinite;
+}
+
+@keyframes change-color {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -1,0 +1,88 @@
+.markdown-body {
+  color: var(--color-text);
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  font-size: 23px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.markdown-body li {
+  line-height: 1.1;
+  margin-top: 0.5em;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  width: 100%;
+  border: white 1px solid;
+}
+
+.markdown-body th {
+  border: white 1px solid;
+}
+
+.markdown-body td {
+  border: white 1px solid;
+}
+
+.markdown-body p {
+  font-size: 20px;
+  text-indent: 2rem;
+}
+
+.markdown-body pre {
+  background-color: #282c34;
+  color: rgb(180, 180, 180);
+  padding: 10px;
+  pointer-events: none;
+  z-index: 0;
+  position: relative;
+}
+
+.markdown-body pre > code {
+  display: block;
+  overflow-x: auto;
+  color: rgb(180, 180, 180);
+  width: 100%;
+  pointer-events: auto;
+}
+
+.markdown-body pre > code::-webkit-scrollbar {
+  height: 8px;
+}
+
+.markdown-body pre > code::-webkit-scrollbar-track {
+  background: #1e2227;
+  border-radius: 4px;
+}
+
+.markdown-body pre > code::-webkit-scrollbar-thumb {
+  background: #454b55;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.markdown-body pre > code::-webkit-scrollbar-thumb:hover {
+  background: #5a6069;
+}
+
+.markdown-body pre::before {
+  content: '';
+  pointer-events: auto;
+  background-image: url('/PhCopy.webp');
+  background-size: cover;
+  display: block;
+  position: absolute;
+  filter: invert(1);
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  right: 5px;
+  transform: translateZ(0);
+  background-attachment: local;
+}

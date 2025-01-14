@@ -1,0 +1,23 @@
+<view class="user-profile-wrapper" wx:if="{{user}}">
+  <view class="profile-card profile-header-wrapper">
+    <view class="profile-header">
+      <user-avatar src="{{user.avatarURL}}" />
+      <view class="profile-header-info">
+        <view class="user-name">{{user.name}}</view>
+        <view class="user-bio">{{user.intro}}</view>
+      </view>
+      <view wx:if="{{userInfo.userID !== user.userID}}" bindtap="navigateChat" class="btn-chat">
+        <icon type="send" size="16" />
+        私信
+      </view>
+    </view>
+  </view>
+  <view class="profile-main">
+    <view class="main-left">
+      <view class="profile-card profile-dynamic"></view>
+    </view>
+    <view class="main-right">
+      <view class="profile-card profile-info"></view>
+    </view>
+  </view>
+</view>

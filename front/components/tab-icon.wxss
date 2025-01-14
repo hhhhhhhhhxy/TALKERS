@@ -1,0 +1,12 @@
+/* components/tab-icon/tab-icon.wxss */
+.tab-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-text {
+  font-size: 12px;
+  margin-top: 4px;
+}

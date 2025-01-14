@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3b8794e5-2662-4d3e-9407-c35629c6270c" name="Changes" comment="单元测试modify password" />
+    <list default="true" id="7d87bc01-6743-41ff-9359-f16faa2687d0" name="变更" comment="完善了通知页面，现在可以接受帖子评论、评论的回复、惩罚、反馈、举报处理的通知，并且对于帖子评论、评论的回复的通知点击通知响应位置会自动跳转到相应的位置(返回按钮也搞好了）。后端通知发送的逻辑错误也修复了，现在收到评论的回复有两种情况：一是其他人在我的帖子的评论下回复，二是其他人回复了我的二级评论。这两种情况不可同时发生，或者说同时发生也只收到一条通知。&#10;在侧边栏显示未读通知数量，数量为0则不显示，每次跳转路由的时候都会计算一次通知的数量。主页帖子显示头像和图片，帖子详情页也显示作者头像。由于举报和反馈还要基于其他人的一些工作，所有还没完善，但显示的框架已经搭建好了">
+      <change afterPath="$PROJECT_DIR$/public/uploads/1685374565208582400_微信图片_20211027125601.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1685375190721376400_微信图片_20211027125601.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1685375579118518300_微信图片_20211027125601.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1685375622976393700_微信图片_20211027125601.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1685375634251774700_Screenshot 2021-08-20 161616.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/1685444655609556200_微信图片_20211027125601.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssl/cert.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssl/cert.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2023_05_29_23_18____.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2023_05_29_23_18_取消提交了变更_[变更]/FlameArtwork.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/FlameArtwork.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2023_05_29_23_18_取消提交了变更_[变更]/pbk.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/pbk.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2023_05_29_23_18_取消提交了变更_[变更]/phonebackground.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/phonebackground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2023_05_29_23_18_取消提交了变更_[变更]/shelved.patch" beforeDir="false" />
+    <list default="true" id="3b8794e5-2662-4d3e-9407-c35629c6270c" name="Changes" comment="单元测试modify password">
+      <change afterPath="$PROJECT_DIR$/config/initConfig.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/ModifyPassword_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/database.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/database.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/postController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/postController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/userController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/userController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/managerController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/managerController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/userController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/userController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/route/routes.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../../../Program Files/Go" />
+  <component name="GOROOT" url="file:///usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="useGoPathFromSystemEnvironment" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectId" id="2PsYIhWwF8JRrkVdhv1ukMwJU7V" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "configurable..is.expanded": "false",
+    "configurable.GoLibrariesConfigurable.is.expanded": "true",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "D:/Administrator/Desktop/web项目/SSEMARKET/SSE_market_server/ssl",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;configurable..is.expanded&quot;: &quot;false&quot;,
+    &quot;configurable.GoLibrariesConfigurable.is.expanded&quot;: &quot;true&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/michael&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Administrator\Desktop\web项目\SSEMARKET\SSE_market_server\ssl" />
+      <recent name="D:\Administrator\Desktop\web项目\SSEMARKET\SSE_market_server\images" />
+      <recent name="D:\Administrator\Desktop\web项目\SSEMARKET\SSE_market_server\model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/router" />
+      <recent name="$PROJECT_DIR$/" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build loginTest">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="SSE_market_server" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="loginTest" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build loginTest" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true" show_console_on_std_out="true">
+      <module name="SSE_market_server" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <package value="loginTest" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="SSE_market_server" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <package value="loginTest" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go 构建.go build loginTest" />
+      </list>
+    </recent_temporary>
+    <configuration name="go test SSE_market_server" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
+      <module name="SSE_market_server" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="DIRECTORY" />
+      <package value="loginTest" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Build.go build loginTest" />
+      <item itemvalue="Go Test.go test SSE_market_server" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build loginTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <created>1686114021906</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686114021906</updated>
+      <workItem from="1686114023687" duration="331000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="上传了数据库对应的结构体（放在/model），每张表对应一个结构体。由于数据库的名称发生了变化，所以对原来的登录和注册功能进行了重构以方便进行初步的测试（前段和后端都要修改重构），其中注册功能还存在问题（能够在数据库创建记录，但是会出现“权限不足”，userID不能成功创建，一直为0），只可以通过修改数据库勉强实现注册和登录。" />
+    <MESSAGE value="只能说gorm数据库很玄妙，要想把复杂的表关系和键关系通过结构体映射到数据库是比较难的。现在这个版本的model解决了主键问题，但是外键其实并没有成功自动映射到数据库，只是有一些引用的关系。但是这似乎并不是一个大问题。由于主键问题解决了，注册存在的问题也解决了。除此之外，model的各个“id”也改为了“ID”" />
+    <MESSAGE value="修复因字段问题引起的点赞失效。" />
+    <MESSAGE value="实现了帖子页面详情的功能包括显示帖子评论和评论的评论，对帖子进行评论和对帖子评论进行回复，以及对帖子的评论和评论的评论进行点赞。。此外还完善添加数据库的外键。添加了ssemarket数据的md文件，方便大家查阅结构体相关字段的含义以及进行更新。" />
+    <MESSAGE value="实现了帖子页面详情的功能包括显示帖子评论和评论的评论，对帖子进行评论和对帖子评论进行回复，以及对帖子的评论和评论的评论进行点赞。。此外还完善添加数据库的外键。结构体ccomment添加了usertargetName字段，用于显示评论的回复。添加了ssemarket数据的md文件，方便大家查阅结构体相关字段的含义以及进行更新。&#10;发表评论的回复现在会返回成功添加的结构体，这个可以用来让前端不用整个刷新(前端目前还是整个获取刷新）。" />
+    <MESSAGE value="修复token检验的问题" />
+    <MESSAGE value="增加每日备份" />
+    <MESSAGE value="单元测试modify password" />
+    <option name="LAST_COMMIT_MESSAGE" value="单元测试modify password" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>
+

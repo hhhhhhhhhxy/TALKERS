@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "basic-card": "/components/basic-card/basic-card"
+  }
+}
